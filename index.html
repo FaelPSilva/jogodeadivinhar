@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
+            <img src="img/acertou-removebg-preview.png" alt="" class="balao__acertou" class="balao__acertou-show">
+            <img src="img/alto-removebg-preview.png" alt="" class="balao__alto" class="balao__alto-show">
+            <img src="img/baixo-removebg-preview.png" alt="" class="balao__baixo" class="balao__baixo-show">
+            <div class="container__informacoes">
+                <img src="./img/trophy.png" alt="ícone de um troféu" />
+
+                <div class="container__texto">
+                    <h1 id="frase">Ei...você <span class="container__texto-azul" id="acertou"> vamos jogar ?</span></h1>
+                    <h2 id="subTitulo">"Duvido você acertar... "</h2>
+                </div>
+                <h3>Primeiro, selecione o número de jogadores</h3><br>
+
+                <div id="nPlayer">
+                    <button class="btn btn1" onclick="selecionarJogadores(1)">1</button>
+                    <button class="btn btn2" onclick="selecionarJogadores(2)">2</button>
+                </div>
+                <form>
+                    <div class="player1">
+                        <h5>Jogador 1:</h5>
+                        <input type="text" class="inputName" id="jogador1" placeholder="Jogador 1" required>
+                    </div>
+                    <div class="player2">
+                        <h5>Jogador 2:</h5>
+                        <input type="text" class="inputName" id="jogador2" placeholder="Jogador 2" required>
+
+                    </div>
+                    <button class="btnPronto" type="submit">Pronto</button>
+                </form>
+            </div>
+           
+            <div>
+                <div class="container__informacoes2" class="show">
+                    <h3>Vamos La!</h3>
+                    <div id="timer">
+                        <div class="time" id="milliseconds">000</div>
+                    </div>
+                    <div id="timerOff">
+                        <div class="time" id="milliseconds">???</div>
+                    </div>
+                    <p id="paragrafo2">clique em GERAR para um novo número misterioso</p>
+                    <button id="btnGerar">Gerar</button>
+
+                    <div id="campoChute">
+
+                        <h4 id="pBranco">Vamos lá <span id="jogadorDaVez"> </span> é sua vêz !</h4>
+                        <h6>AGORA, DIGITE UM NÚMERO DE 1 A 999 E BOA SORTE !</h6>
+                    <form>
+                        <input type="text" id="inputChute" maxlength="3" required> <button id="btnChute" type="submit"> Chutar
+                        </button>
+                    </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <a href="index.html">
+                <butto id="btn-home">Voltar ao início</button>
+            </a>
+
+        </div>
+
+
+
+
+
+
+
+
+        <script src="app.js" defer></script>
+</body>
+
+</html>

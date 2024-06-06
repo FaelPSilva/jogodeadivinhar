@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 20px;
+    display: block;
+    height: 643px;
+    width: 594px;
+}
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+}
+
+h2,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.inputName{
+    max-width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    color: #01080E;
+    font-weight: bold;
+    padding-left: 15px;  
+    margin-left: 0px;  
+}
+
+.player1{
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.player2{
+    display: none;
+}
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.btn1 { background-color: #1354A5; }
+.btn2 { background-color: #1354A5; }
+
+p{
+    color: #01080E;
+}
+
+.btnPronto{
+    font-size: 15px;
+    color: white;
+    background-color: #1354A5;
+    border-radius: 15px;
+    padding: 5px;
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin: 10px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+to
+    {
+        opacity: 1;
+    }
+}
+
+.container__informacoes2.show{
+    animation: fadeIn;
+    animation-duration: .8s ;
+    display: flex;
+
+}
+
+.container__informacoes2{
+display: none;
+ flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+ 
+    
+}
+
+h3{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 25px;
+    color: rgb(255, 68, 0);
+}
+
+
+#btnGerar{
+    align-items: center;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #1354A5;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#paragrafo2{
+    color: #fff;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#pBranco {
+    font-size: 30px;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 20px;
+
+}
+
+
+#inputChute {
+
+width: 50px;
+height: 30px;
+border-radius: 10px;
+margin: 20px;
+color: rgb(255, 255, 255);
+background-color: #27477063;
+font-size: 15px;
+text-align: center;
+font-family: 'Chakra Petch', sans-serif;
+
+}
+
+#btnChute {
+
+    background-color: #0f5cc2;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    
+
+}
+
+#campoChute{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    display: flex;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 50px;
+
+}
+
+#timerOff {
+
+    display: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 50px;
+
+}
+
+.container__conteudo {
+
+gap: 120px;
+
+}
+
+.container__imagem-robo {
+
+    width: 500px;
+
+}
+
+.balao__acertou {
+
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+    display: none;
+
+}
+
+.balao__alto {
+
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+    display: none;
+
+}
+
+.balao__baixo {
+
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+    display: none;
+
+}
+
+.balao__acertou-show {
+    animation: fadeIn;
+    animation-duration: .8s ;
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+   display: flex;
+   
+
+}
+
+.balao__alto-show {
+    animation: fadeIn;
+    animation-duration: .8s ;
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+    display: flex;
+
+}
+
+.balao__baixo-show {
+    animation: fadeIn;
+    animation-duration: .8s ;
+    position: absolute;
+    width: 250px;
+    max-width: 100%; /* Para garantir que a imagem não exceda a largura da div */
+    height: auto;
+    top: 30px;
+    left: 400px;
+    display: flex; 
+
+}
+ a {
+
+    background-color: #0f57c259;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px black;
+    position: absolute;
+    left: 400px;
+    top: 470px;
+}
+
+h6 {
+
+    display: flex;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 50px;
+    color: white;
+    display: flex;
+    font-size: 1rem;
+
+}
+
+
